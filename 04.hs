@@ -1,4 +1,3 @@
-import Common
 import Data.List
 
 main = do
