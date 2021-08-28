@@ -6,8 +6,8 @@ import Data.Maybe
 import Debug.Trace
 
 main = do
-    content <- readFile "06.input"
-    let mem = parse content
+    line <- readSingleLineFile "06.input"
+    let mem = parse line
     -- putStrLn $ show $ mem
     let mems = iterate realloc mem
     let Just (i, mem') = firstDup mems

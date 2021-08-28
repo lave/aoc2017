@@ -12,7 +12,7 @@ data Op = Eq | Ne | Lt | Le | Gt | Ge
 main = do
     content <- readFile "08.input"
     let prg = numRegs $ parse content
-    --putStrLn $ show $ prg
+    --putStrLn $ show prg
     let (m1, m2) = solve prg
     putStrLn $ show m1
     putStrLn $ show m2

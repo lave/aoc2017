@@ -2,6 +2,11 @@ module Common where
 import qualified Data.Set
 import qualified Data.Either
 
+readSingleLineFile filename = do
+    content <- readFile filename
+    let [line] = lines content
+    return line
+
 readInt s = read s :: Int
 
 readsInt s = reads s :: [(Int, String)]

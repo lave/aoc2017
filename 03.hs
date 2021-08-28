@@ -4,12 +4,10 @@ import Data.Maybe
 import Debug.Trace
 
 main = do
-    content <- readFile "03.input"
-    let addr = parse content
+    line <- readSingleLineFile "03.input"
+    let addr = readInt line
     putStrLn $ show $ solve1 addr
     putStrLn $ show $ solve2 addr
-
-parse = readInt . head . lines
 
 
 --  values at corners: 1, 2, 3, 5, 7, 10 ...

@@ -8,8 +8,7 @@ import Numeric (showHex)
 import Common
 
 main = do
-    content <- readFile "10.input"
-    let line = head $ lines content
+    line <- readSingleLineFile "10.input"
     putStrLn $ show $ solve1 line
     putStrLn $ solve2 line
 

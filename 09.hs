@@ -1,8 +1,9 @@
 import Data.List
 
+import Common
+
 main = do
-    content <- readFile "09.input"
-    let [stream] = lines content    
+    stream <- readSingleLineFile "09.input"
     --putStrLn $ show $ stream
     let (scores, garbage) = solve stream
     putStrLn $ show $ scores
